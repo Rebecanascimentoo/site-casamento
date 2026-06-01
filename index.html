@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Nosso Casamento - Rodrigo & Gabriela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- FOLHAS DECORATIVAS -->
+    <img src="images/fundo_sup_esquerdo.png" class="folha folha-esquerda" alt="decoração">
+    <img src="images/fundo_sup_direiro.png" class="folha folha-direita" alt="decoração">
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="container">
+        <section class="convite">
+            
+            <!-- LOGO -->
+            <img src="images/Logo.png" alt="Logo RG" class="logo">
+
+            <!-- TEXTO CONVITE -->
+            <p class="frase">
+                Nosso grande dia está chegando,<br>
+                e não poderíamos celebrá-lo sem a presença de pessoas especiais<br>
+                que fazem parte da nossa história.
+            </p>
+            <p class="frase">
+                Cada sorriso compartilhado, cada momento vivido<br>
+                e cada lembrança construída ao longo do caminho<br>
+                tornaram esse dia ainda mais significativo.
+            </p>
+            <p class="frase">
+                Será uma alegria ter você conosco<br>
+                para celebrar o início da nossa nova vida. 🤍
+            </p>
+
+            <!-- DATA E HORÁRIO -->
+            <div class="infos">
+                <div class="info">
+                    <span class="emoji">📅</span>
+                    <p>15 de agosto, 2026</p>
+                </div>
+                <div class="linha"></div>
+                <div class="info">
+                    <span class="emoji">🕐</span>
+                    <p>10:00</p>
+                </div>
+            </div>
+
+            <!-- CERIMÔNIA -->
+            <section class="bloco">
+                <h3> Celebração</h3>
+                <p>Rua Camapuã, 130 - Fundão, Recife/PE</p>
+                <small>
+                    Escolhemos comemorar e viver esse momento de forma leve,
+                    íntima e verdadeira, celebrando nossa união
+                    ao lado das pessoas que mais amamos.
+                </small>
+            </section>
+
+            <!-- LISTA DE PRESENTES -->
+            <div class="lista-presentes">
+                <h3>🎁 Para quem desejar nos presentear 🎁</h3>
+                <p>
+                    Preparamos uma lista com algumas sugestões escolhidas com muito carinho,
+                    lembrando que só vamos conseguir aceitar presentes comprados de forma online,
+                    pois iremos nos mudar para outro estado. 🤍
+                </p>
+                <a href="https://docs.google.com/spreadsheets/d/1jXDkrP94mbrLPHP_zJ03duSXKeCv5jTSN4Mx_3Y_Bus/edit?usp=sharing7" target="_blank" class="btn-presentes">
+                    ✨ Ver lista de presentes ✨
+                </a>
+            </div>
+
+            <!-- BOTÕES DE AÇÃO -->
+            <div class="botoes">
+                <button class="btn-confirmar" onclick="confirmarPresenca()">
+                    💍 Confirmar presença
+                </button>
+                <button class="btn-nao" onclick="naoVou()">
+                    💔 Não poderei ir
+                </button>
+            </div>
+
+            <!-- MENSAGEM DE RETORNO -->
+            <div id="mensagemConfirmacao" class="mensagem"></div>
+
+            <!-- FORMULÁRIO DE CONFIRMAÇÃO MELHORADO -->
+<div id="secaoFormulario" class="secao-formulario">
+    <div class="form-header">
+        <h3>✨ Confirme sua presença ✨</h3>
+        <p>Adoraríamos saber se você virá celebrar conosco!</p>
+        <div class="aviso-restricao">
+            <span>⚠️</span>
+            <small>Por favor, traga apenas seu acompanhante (máximo 1 pessoa)</small>
+        </div>
+    </div>
+    
+    <form action="https://formsubmit.co/guibsonwendell@icloud.com" method="POST" id="formConfirmacao">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nova confirmação de presença 💍">
+        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+        
+        <div class="form-group">
+            <label for="nome">
+                <span class="label-icon">👤</span>
+                Seu nome completo
+            </label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Ana Silva Santos" required>
+            <small class="input-hint">Como você gostaria de ser chamado(a)?</small>
+        </div>
+
+        <div class="form-group">
+            <label for="acompanhante">
+                <span class="label-icon">👥</span>
+                Você trará acompanhante?
+            </label>
+            <select id="acompanhante" name="acompanhante" required>
+                <option value="">Selecione uma opção</option>
+                <option value="0">❌ Não, virei sozinho(a)</option>
+                <option value="1">✅ Sim, trarei 1 acompanhante</option>
+            </select>
+            <small class="input-hint aviso-limite">🔔 Permitido apenas 1 acompanhante por convidado</small>
+        </div>
+
+        <div class="form-group" id="grupoNomeAcompanhante" style="display:none;">
+            <label for="nomeAcompanhante">
+                <span class="label-icon">📝</span>
+                Nome do acompanhante
+            </label>
+            <input type="text" id="nomeAcompanhante" name="nomeAcompanhante" placeholder="Nome completo do acompanhante">
+            <small class="input-hint">Digite o nome completo de quem virá com você</small>
+        </div>
+
+        <div class="form-group">
+            <label for="telefone">
+                <span class="label-icon">📱</span>
+                Telefone para contato (opcional)
+            </label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="form-group">
+            <label for="mensagem">
+                <span class="label-icon">💌</span>
+                Deixe uma mensagem para os noivos
+            </label>
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Escreva aqui sua mensagem especial..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="alergia" value="sim">
+                <span class="checkmark"></span>
+                Tenho alguma restrição alimentar ou alergia
+            </label>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-enviar">
+                <span>📨</span> Confirmar minha presença
+            </button>
+            <button type="button" class="btn-cancelar" onclick="fecharFormulario()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+</div>
+
+            <!-- RODAPÉ -->
+            <footer class="rodape">
+                ✨ Esperamos você com muito carinho ✨
+            </footer>
+        </section>
+    </main>
+
+    <!-- ELEMENTOS DECORATIVOS FLUTUANTES -->
+    <img src="images/fundo_inf_esquerdo.png" class="flor-baixo-esquerda" alt="flores decorativas">
+    <img src="images/fundo_inf_direito1.png" class="flor-baixo-direita" alt="flores decorativas">
+    <img src="images/fundo_inf_direito2.png" class="vela" alt="vela decorativa">
+
+    <script src="script.js"></script>
+</body>
+</html>
