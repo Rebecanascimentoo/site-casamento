@@ -75,101 +75,22 @@
                 </a>
             </div>
 
-            <!-- BOTÕES DE AÇÃO -->
-            <div class="botoes">
-                <button class="btn-confirmar" onclick="confirmarPresenca()">
-                    💍 Confirmar presença
-                </button>
-                <button class="btn-nao" onclick="naoVou()">
-                    💔 Não poderei ir
-                </button>
-            </div>
-
-            <!-- MENSAGEM DE RETORNO -->
-            <div id="mensagemConfirmacao" class="mensagem"></div>
-
-            <!-- FORMULÁRIO DE CONFIRMAÇÃO MELHORADO -->
-<div id="secaoFormulario" class="secao-formulario">
-    <div class="form-header">
-        <h3>✨ Confirme sua presença ✨</h3>
-        <p>Adoraríamos saber se você virá celebrar conosco!</p>
-        <div class="aviso-restricao">
-            <span>⚠️</span>
-            <small>Por favor, traga apenas seu acompanhante (máximo 1 pessoa)</small>
-        </div>
-    </div>
-    
-    <form action="https://formsubmit.co/rebecaroiznascimento@gmail.com" method="POST" id="formConfirmacao">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="Nova confirmação de presença 💍">
-        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-        
-        <div class="form-group">
-            <label for="nome">
-                <span class="label-icon">👤</span>
-                Seu nome completo
-            </label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Ana Silva Santos" required>
-            <small class="input-hint">Como você gostaria de ser chamado(a)?</small>
-        </div>
-
-        <div class="form-group">
-            <label for="acompanhante">
-                <span class="label-icon">👥</span>
-                Você trará acompanhante?
-            </label>
-            <select id="acompanhante" name="acompanhante" required>
-                <option value="">Selecione uma opção</option>
-                <option value="0">❌ Não, virei sozinho(a)</option>
-                <option value="1">✅ Sim, trarei 1 acompanhante</option>
-            </select>
-            <small class="input-hint aviso-limite">🔔 Permitido apenas 1 acompanhante por convidado</small>
-        </div>
-
-        <div class="form-group" id="grupoNomeAcompanhante" style="display:none;">
-            <label for="nomeAcompanhante">
-                <span class="label-icon">📝</span>
-                Nome do acompanhante
-            </label>
-            <input type="text" id="nomeAcompanhante" name="nomeAcompanhante" placeholder="Nome completo do acompanhante">
-            <small class="input-hint">Digite o nome completo de quem virá com você</small>
-        </div>
-
-        <div class="form-group">
-            <label for="telefone">
-                <span class="label-icon">📱</span>
-                Telefone para contato (opcional)
-            </label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-        </div>
-
-        <div class="form-group">
-            <label for="mensagem">
-                <span class="label-icon">💌</span>
-                Deixe uma mensagem para os noivos
-            </label>
-            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Escreva aqui sua mensagem especial..."></textarea>
-        </div>
-
-        <div class="form-group checkbox-group">
-            <label class="checkbox-label">
-                <input type="checkbox" name="alergia" value="sim">
-                <span class="checkmark"></span>
-                Tenho alguma restrição alimentar ou alergia
-            </label>
-        </div>
-
-        <div class="form-actions">
-            <button type="submit" class="btn-enviar">
-                <span>📨</span> Confirmar minha presença
-            </button>
-            <button type="button" class="btn-cancelar" onclick="fecharFormulario()">
-                Cancelar
-            </button>
-        </div>
-    </form>
-</div>
+          <!-- GOOGLE FORMS -->
+<iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLScDC2OPn71SPPNhIhnPke724du_BdLN668uFphd7QfOLm9OIA/viewform?usp=preview"
+    width="100%"
+    height="900"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    style="
+        border: none;
+        border-radius: 15px;
+        background: white;
+        margin-top: 20px;
+    ">
+    Carregando formulário...
+</iframe>
 
             <!-- RODAPÉ -->
             <footer class="rodape">
